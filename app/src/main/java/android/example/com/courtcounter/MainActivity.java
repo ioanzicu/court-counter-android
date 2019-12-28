@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
+    int scoreTeamA = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,24 +16,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the "+3 POINTS" button is pushed
+     * Increase the score for Team A by 3 points
      */
     public void addThreeForTeamA(View view) {
-        displayForTeamA(3);
+        scoreTeamA = scoreTeamA + 3;
+        displayForTeamA(scoreTeamA);
     }
 
     /**
-     * This method is called when the "+2 POINTS" button is pushed
+     * Increase the score for Team A by 2 points
      */
     public void addTwoForTeamA(View view) {
-        displayForTeamA(2);
+        scoreTeamA = scoreTeamA + 2;
+        displayForTeamA(scoreTeamA);
     }
 
     /**
-     * This method is called when the "FREE THROW" button is pushed
+     * Increase the score for Team A by 1 point
      */
     public void addOneForTeamA(View view) {
-        displayForTeamA(1);
+        scoreTeamA++;
+        displayForTeamA(scoreTeamA);
     }
 
     /**
