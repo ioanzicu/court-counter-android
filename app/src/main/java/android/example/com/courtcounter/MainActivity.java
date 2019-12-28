@@ -17,12 +17,27 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(0);
     }
 
+    public void resetScore(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+    }
+
     /**
      * Increase the score for Team A by 3 points
      */
     public void addThreeForTeamA(View view) {
         scoreTeamA = scoreTeamA + 3;
         displayForTeamA(scoreTeamA);
+    }
+
+    /**
+     * Increase the score for Team B by 3 points
+     */
+    public void addThreeForTeamB(View view) {
+        scoreTeamB = scoreTeamB + 3;
+        displayForTeamB(scoreTeamB);
     }
 
     /**
@@ -34,11 +49,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Increase the score for Team B by 2 points
+     */
+    public void addTwoForTeamB(View view) {
+        scoreTeamB = scoreTeamB + 2;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /**
      * Increase the score for Team A by 1 point
      */
     public void addOneForTeamA(View view) {
         scoreTeamA++;
         displayForTeamA(scoreTeamA);
+    }
+
+    /**
+     * Increase the score for Team B by 1 point
+     */
+    public void addOneForTeamB(View view) {
+        scoreTeamB++;
+        displayForTeamB(scoreTeamB);
     }
 
     /**
@@ -49,30 +80,6 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-
-    /**
-     * Increase the score for Team B by 3 points
-     */
-    public void addThreeForTeamB(View view) {
-        scoreTeamB = scoreTeamB + 3;
-        displayForTeamB(scoreTeamB);
-    }
-
-    /**
-     * Increase the score for Team B by 2 points
-     */
-    public void addTwoForTeamB(View view) {
-        scoreTeamB = scoreTeamB + 2;
-        displayForTeamB(scoreTeamB);
-    }
-
-    /**
-     * Increase the score for Team B by 1 point
-     */
-    public void addOneForTeamB(View view) {
-        scoreTeamB++;
-        displayForTeamB(scoreTeamB);
-    }
 
     /**
      * Displays the given score for Team B.
